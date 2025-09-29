@@ -196,3 +196,36 @@ video {
   font-weight: 300;
   letter-spacing: 0.5px;
 }
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-areas:
+      ". header"
+      "nav main"
+      "footer footer";
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .nav ul {
+    flex-wrap: none;
+    flex-direction: column;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    grid-template-areas:
+      ". .   header . "
+      ". nav main   . "
+      "footer footer footer footer";
+    grid-template-columns: 100px 1fr 2fr 100px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
